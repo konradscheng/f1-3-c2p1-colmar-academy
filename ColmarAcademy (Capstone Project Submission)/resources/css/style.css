@@ -1,0 +1,785 @@
+html {
+  font-family: "Copse", serif;
+  color: #1B4B36;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-bottom: 3px solid black;
+  width: 98%;
+  position: fixed;
+  z-index: 1;
+  background-image: url(../../resources/images/Noise-Texture-Grey.png);
+  color: #7EB19F;
+  opacity: 0.9;
+}
+
+header a {
+  color: #222222;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #EC625F;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 5px;
+  border-radius: 35px;
+  box-shadow: 0px 0px 25px 15px #EC625F;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+
+.logo img {
+  height: 9%;
+  width: 9%;
+}
+
+.logo span {
+  font-family: "Bungee Shade", cursive;
+  font-size: 38px;
+  margin-left: 8px;
+  text-shadow: 4px 4px 3px #000000;
+}
+
+nav a {
+  margin-right: 36px;
+  color: #7EB19F;
+  font-size: 16px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 720px) {
+  header {
+    width: 100%;
+    position: static;
+    padding: 0;
+  }
+
+  nav .desktop {
+    display: none;
+  }
+
+  nav .mobile {
+    display: block;
+  }
+
+  header nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  header {
+    width: 100%;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  .logo span {
+    font-size: 25px;
+    margin-left: 8px;
+  }
+
+  header nav {
+    width: 50%;
+    margin-right: 36px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav a {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+/* Banner */
+
+.banner {
+  padding-top: 117px;
+  padding-bottom: 32px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid black;
+  background-image: url(../../resources/images/Noise-Texture-Red.png);
+}
+
+.banner img {
+  margin-right: 80px;
+  width: 60%;
+  border: 5px solid #85C8DD;
+  border-radius: 25px;
+  box-shadow: 0px 0px 30px 10px white;
+}
+
+.banner-text {
+  width: 35%;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.banner-text h1 {
+  font-size: 50px;
+  text-decoration: underline;
+  text-decoration-color: #222222;
+  margin-bottom: 16px;
+  text-shadow: 4px 4px 3px #538F6A;
+}
+
+.banner-text h2 {
+
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.start-here {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #525252;
+  border: 1px solid black;
+  color: #AEBD77;
+  font-size: 26px;
+  border: 5px solid #85C8DD;
+  border-radius: 35px;
+}
+
+.start-here span:hover {
+  font-size: 40px;
+  text-shadow: 2px 2px 3px #EFE94B;
+}
+
+@media only screen and (max-width: 720px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .banner-text {
+    margin: 0;
+    padding: 32px 24px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .start-here {
+    width: 100%;
+  }
+
+  .banner-text h1 {
+    font-size: 35px;
+    text-decoration: underline;
+    text-decoration-color: #222222;
+    margin-bottom: 8px;
+    text-shadow: 4px 4px 3px #538F6A;
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  .banner {
+    padding-top: 110px;
+    padding-bottom: 32px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .banner img {
+    margin-right: 30px;
+    width: 50%;
+  }
+
+  .banner-text {
+    width: 40%;
+  }
+
+  .banner-text h1 {
+    font-size: 35px;
+  }
+
+  .banner-text h2 {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .start-here {
+    width: 90%;
+  }
+}
+
+/* More Info/Articles */
+
+.more-info {
+  display: flex;
+  border-bottom: 3px solid black;
+  background-image: url(../../resources/images/Noise-Texture-Grey.png);
+  color: #AEBD77;
+}
+
+@media only screen and (max-width: 720px) {
+  .desktop {
+    display: none;
+  }
+}
+
+/* Left Side */
+
+.more-info-left {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  width: 60%;
+}
+
+.more-info-left img {
+  width: 100%;
+  margin-bottom: 32px;
+  border: 5px solid #85C8DD;
+  border-radius: 25px;
+  box-shadow: 0px 0px 30px 10px white;
+}
+
+.more-info-left h2 {
+  margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.more-info-left p {
+  margin-bottom: 36px;
+  font-size: 20px;
+}
+
+.more-info-left h5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  .more-info-left {
+    width: 38%;
+  }
+
+  .more-info-left img {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .more-info-left h2 {
+    font-size: 30px;
+  }
+
+  .more-info-left p {
+    font-size: 16px;
+  }
+
+  .more-info-left h5 {
+    font-size: 12px;
+  }
+}
+
+/* Right Side */
+
+.more-info-right {
+  margin-top: 32px;
+  margin-left: 32px;
+  border-left: 5px solid black;
+  width: 40%;
+}
+
+.more-info-right .article {
+  display: flex;
+  align-items: center;
+  width: 423px;
+  height: 168px;
+  border-bottom: 5px solid black;
+}
+
+.more-info-right .article img {
+  margin: 16px;
+  width: 35%;
+  border: 3px solid #85C8DD;
+  border-radius: 25px;
+  box-shadow: 0px 0px 2.5px 2px white;
+}
+
+.more-info-right .article .article-text h3 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.more-info-right .article .article-text p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.more-info-right .article .article-text a {
+  color: #E0E7F1;
+}
+
+.guest {
+  background-color: #EC625F;
+  color: #1B4B36;
+}
+
+@media only screen and (max-width: 720px) {
+  .more-info-right {
+    margin: 0;
+    border: none;
+    width: 100%;
+  }
+
+  .more-info-right .article {
+    border: none;
+    width: 100%;
+  }
+
+  .more-info-right .article img {
+    width: 20%;
+  }
+
+  .guest {
+    background-image: url(../../resources/images/Noise-Texture-Grey.png);
+    color: #AEBD77;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .more-info-right .article img {
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  .more-info-right {
+    margin-left: 16px;
+    width: 60%;
+  }
+
+  .more-info-right .article {
+    width: 100%;
+    height: 30%;
+    border: none;
+  }
+
+  .more-info-right .article img {
+    margin: 12px;
+    width: 30%;
+  }
+
+  .more-info-right .article .article-text h3 {
+    font-size: 20px;
+  }
+
+  .more-info-right .article .article-text p {
+    font-size: 14px;
+  }
+
+  .more-info-right .article .article-text a {
+    font-size: 14px;
+  }
+
+  .guest {
+    background-image: url(../../resources/images/Noise-Texture-Grey.png);
+    color: #AEBD77;
+  }
+}
+
+/* Start Learning */
+
+.start-learning {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 3px solid black;
+  background-image: url(../../resources/images/Noise-Texture-Red.png);
+}
+
+.start-learning h2 {
+  margin-bottom: 32px;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px #000000;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.class {
+  width: 25%;
+  height: 400px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 20px;
+  background-color: #525252;
+  color: #AEBD77;
+  border: 5px solid #85C8DD;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 3px white;
+}
+
+.class img {
+  width: 100%;
+  height: 50%;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.class h3 {
+  margin-top: 16px;
+  margin-bottom: 36px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.class h4 {
+  margin-bottom: 16px;
+  margin-left: 16px;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.class p {
+  margin-bottom: 24px;
+  margin-left: 16px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 720px) {
+  .start-learning .desktop .row .class {
+    display: none;
+  }
+
+  .start-learning {
+    padding-bottom: 16px;
+  }
+
+  .start-learning h2 {
+    font-size: 32px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .class {
+    width: 90%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .class h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1024px) {///////////////
+  .start-learning {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom: 3px solid black;
+    background-image: url(../../resources/images/Noise-Texture-Red.png);
+  }
+
+  .class {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .class img {
+    width: 100%;
+    height: 40%;
+  }
+
+  .class h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .class h4 {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .class p {
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+}
+
+/* Thesis Exhibit */
+
+.thesis-exhibit {
+  padding: 32px 24px;
+  border-bottom: 3px solid #EC625F;
+  background-image: url(../../resources/images/Noise-Texture-Grey.png);
+  color: #AEBD77;
+}
+
+.thesis-exhibit .thesis-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 4px 4px 3px #000000;
+}
+
+.thesis-sections {
+  display: flex;
+}
+
+@media only screen and (max-width: 720px) {
+  .desktop {
+    display: none;
+  }
+
+  .thesis-exhibit {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 24px;
+    margin: 0;
+  }
+
+  .thesis-title h2 {
+    font-size: 32px;
+  }
+}
+
+/* Left Side */
+
+.thesis-left {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-right: 24px;
+}
+
+.thesis-left video {
+  margin-bottom: 24px;
+  width: 100%;
+  height: auto;
+  border: 5px solid #85C8DD;
+  border-radius: 25px;
+  box-shadow: 0px 0px 30px 10px white;
+}
+
+.thesis-left h3 {
+  margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.thesis-left p {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 720px) {
+  .thesis-left {
+    margin: 0;
+    width: 100%;
+  }
+
+  .thesis-left video {
+    margin-bottom: 24px;
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  .thesis-left {
+    width: 38%;
+  }
+
+  .thesis-left img {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .thesis-left h3 {
+    font-size: 30px;
+  }
+
+  .thesis-left p {
+    font-size: 20px;
+  }
+}
+
+/* Right Side */
+
+.thesis-right {
+  margin-left: 32px;
+  border-left: 5px solid black;
+  width: 40%;
+}
+
+.thesis-right .article {
+  display: flex;
+  align-items: center;
+  width: 423px;
+  height: 168px;
+  border-bottom: 5px solid black;
+}
+
+.thesis-right .article img {
+  margin: 16px;
+  width: 35%;
+  border: 3px solid #85C8DD;
+  border-radius: 25px;
+  box-shadow: 0px 0px 2.5px 2px white;
+}
+
+.thesis-right .article .article-text h3 {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.thesis-right .article .article-text p {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.fisma {
+  background-color: #EC625F;
+  color: #1B4B36;
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  .thesis-right {
+    margin-left: 16px;
+    width: 60%;
+  }
+
+  .thesis-right .article {
+    width: 100%;
+    height: 30%;
+    border: none;
+    margin: 36px 12px;
+  }
+
+  .thesis-right .article img {
+    margin: 12px;
+    width: 30%;
+  }
+
+  .thesis-right .article .article-text h3 {
+    font-size: 20px;
+  }
+
+  .thesis-right .article .article-text p {
+    font-size: 14px;
+  }
+
+  .thesis-right .article .article-text a {
+    font-size: 14px;
+  }
+
+  .fisma {
+    background-image: url(../../resources/images/Noise-Texture-Grey.png);
+    color: #AEBD77;
+  }
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 24px;
+  height: 50px;
+  background-image: url(../../resources/images/Noise-Texture-Grey.png);
+  color: #AEBD77;
+}
+
+.terms-privacy {
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 720px) {
+  footer .desktop {
+    display: none;
+  }
+
+  footer {
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+}
